@@ -16,9 +16,10 @@ import { DashboardComponent } from './dashboard.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { AboutComponent } from '../about/about.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, AboutComponent],
   imports: [
     HttpClientModule,
     FormsModule,

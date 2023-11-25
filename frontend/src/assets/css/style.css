@@ -4403,3 +4403,7 @@ input:focus {
   width: 400px;
   height: 270px; 
 }
+.single_product_img_with_frame.img-fluid{
+  width: 500px;
+  height: 285px; 
+}

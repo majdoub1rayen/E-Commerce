@@ -7,9 +7,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router'; // Import RouterModule
 
 import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContactComponent, ProductListComponent, ProductDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
