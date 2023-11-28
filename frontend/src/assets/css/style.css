@@ -4410,3 +4410,42 @@ input:focus {
 .about_us .about_us_video {
   position: relative;
 }
+.breadcrumb_part {
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #777B7E;
+  border-radius: 15px;
+ 
+  
+}
+
+.breadcrumb_part .breadcrumb_iner {
+  text-align: center;
+}
+
+.breadcrumb_part .breadcrumb_iner h2 {
+  font-size: 50px;
+  line-height: 1.2;
+  color: #fff;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+@media (max-width: 991px) {
+  .breadcrumb_part .breadcrumb_iner h2 {
+    font-size: 30px;
+  }
+}
+/* Adjust the space between breadcrumb_part and contact-section */
+.breadcrumb_part {
+  margin-bottom: 10px; /* Change the margin as needed */
+}
+
+.contact-section {
+  padding-top: 10px; /* Change the padding as needed */
+}
+.about_us {
+  padding-top: 30px; /* Change the padding as needed */
+}
