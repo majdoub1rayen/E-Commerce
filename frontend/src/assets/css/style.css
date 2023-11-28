@@ -4407,3 +4407,6 @@ input:focus {
   width: 500px;
   height: 285px; 
 }
+.about_us .about_us_video {
+  position: relative;
+}
