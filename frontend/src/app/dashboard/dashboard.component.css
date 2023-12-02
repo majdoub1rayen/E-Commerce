@@ -1,0 +1,79 @@
+
+  
+
+  /* Reduce space between sections */
+.banner_part {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .single_product_list {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .trending_items {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .feature_part {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .subscribe_part {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  /* Add these styles to your CSS file */
+.trending_items {
+    background-color: #d9dddc;
+    padding: 100px 0 70px; /* Adjust padding as needed */
+  }
+  
+  .single_product_item {
+    margin-bottom: 30px;
+  }
+  
+  .single_product_item .rounded_image_wrapper {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 330px; /* Adjust image size */
+    height: 330px; /* Adjust image size */
+    margin: 0 auto 15px; /* Center images and add space */
+  }
+  
+  .single_product_item .rounded_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+  }
+  
+  .single_product_item h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 22px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 991px) {
+    .single_product_item h3 {
+      font-size: 18px;
+    }
+  }
+  
+  .single_product_item h3 a {
+    color: #4b3049;
+  }
+  
+  .single_product_item h3 a:hover {
+    color: #b08ead;
+  }
+  
+  .single_product_item p {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .single_product_item p {
+      font-size: 16px;
+    }
+  }
+  
