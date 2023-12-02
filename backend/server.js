@@ -13,13 +13,6 @@ connexion.connect((err) => {
   }
   console.log("Connected to database");
 });
-require("./routes/auth.route")(app);
-// Import and set up the user routes
-const saveUser = require("./controllers/user.controller");
-saveUser(app);
-
-const saveNote = require("./controllers/note.controller");
-saveNote(app);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
