@@ -25,10 +25,10 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" routerLink="/dashboard">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="../about">About</a>
+                <a class="nav-link" href="about.html">about</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -43,10 +43,10 @@
                   product
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                  <a class="dropdown-item" routerLink="../product-list"
-                    >product list</a
+                  <a class="dropdown-item" href="product_list.html">
+                    product list</a
                   >
-                  <a class="dropdown-item" routerLink="../product-details"
+                  <a class="dropdown-item" href="single-product.html"
                     >product details</a
                   >
                 </div>
@@ -64,7 +64,7 @@
                   pages
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                  <a class="dropdown-item" href="login.html"> login </a>
+                  <a class="dropdown-item" routerLink="../login"> login </a>
                   <a class="dropdown-item" href="checkout.html"
                     >product checkout</a
                   >
@@ -76,8 +76,28 @@
                 </div>
               </li>
 
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="blog.html"
+                  id="navbarDropdown_2"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  blog
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                  <a class="dropdown-item" href="blog.html"> blog</a>
+                  <a class="dropdown-item" href="single-blog.html"
+                    >Single blog</a
+                  >
+                </div>
+              </li>
+
               <li class="nav-item">
-                <a class="nav-link" routerLink="../contact">Contact</a>
+                <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
           </div>
@@ -102,7 +122,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="breadcrumb_iner">
-          <h2>contact</h2>
+          <h2>login</h2>
         </div>
       </div>
     </div>
@@ -110,100 +130,57 @@
 </section>
 <!-- breadcrumb part end-->
 
-<!-- ================ contact section start ================= -->
-<section class="contact-section section_padding">
-  <div class="container">
-    <div class="d-none d-sm-block mb-5 pb-4">
-      <div id="map"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <h2 class="contact-title">Get in Touch</h2>
-      </div>
-      <div class="col-lg-8">
-        <form
-          [formGroup]="ContactForm"
-          (ngSubmit)="saveContact()"
-          class="form-contact contact_form"
-          id="contactForm"
-          novalidate
-        >
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <textarea
-                  class="form-control w-100"
-                  formControlName="message"
-                  cols="30"
-                  rows="9"
-                  placeholder="Enter Message"
-                ></textarea>
-              </div>
+<!--================login_part Area =================-->
+<section>
+  <div class="wrapper">
+    <div class="auth-content">
+      <div class="card">
+        <div class="card-body text-center">
+          <h6 class="mb-4 text-muted">Login to your account</h6>
+          <form action="" method="">
+            <div class="mb-3 text-start">
+              <label for="email" class="form-label">Email adress</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter Email"
+                required
+              />
             </div>
-            <div class="col-sm-6">
-              <div class="form-group">
+            <div class="mb-3 text-start">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="mb-3 text-start">
+              <div class="form-check">
                 <input
-                  class="form-control"
-                  formControlName="name"
-                  type="text"
-                  placeholder="Enter your name"
+                  class="form-check-input"
+                  name="remember"
+                  type="checkbox"
+                  value=""
+                  id="check1"
                 />
+                <label class="form-check-label" for="check1">
+                  Remember me on this device
+                </label>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <input
-                  class="form-control"
-                  formControlName="email"
-                  type="email"
-                  placeholder="Enter email address"
-                />
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-group">
-                <input
-                  class="form-control"
-                  formControlName="subject"
-                  type="text"
-                  placeholder="Enter Subject"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group mt-3">
-            <button type="submit" class="btn_3 button-contactForm">
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
-      <!-- Information part-->
-      <div class="col-lg-4">
-        <div class="media contact-info">
-          <span class="contact-info__icon"><i class="ti-home"></i></span>
-          <div class="media-body">
-            <h3>Buttonwood, California.</h3>
-            <p>Rosemead, CA 91770</p>
-          </div>
-        </div>
-        <div class="media contact-info">
-          <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-          <div class="media-body">
-            <h3>00 (440) 9865 562</h3>
-            <p>Mon to Fri 9am to 6pm</p>
-          </div>
-        </div>
-        <div class="media contact-info">
-          <span class="contact-info__icon"><i class="ti-email"></i></span>
-          <div class="media-body">
-            <h3>support</h3>
-            <p>Send us your query anytime!</p>
-          </div>
+            <button class="btn btn-primary shadow-2 mb-4">Login</button>
+          </form>
+          <p class="mb-2 text-muted">
+            Forgot password? <a href="forgot-password.html">Reset</a>
+          </p>
+          <p class="mb-0 text-muted">
+            Don't have account yet? <a routerLink="../register">Signup</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- ================ contact section end ================= -->
+<!--================login_part end =================-->

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const connexion = require("./controllers/db").connexion;
+const connexion = require("./app/controllers/db").connexion;
 app.use(cors()); // allow request from different domains
 app.use(express.json()); // create an express application
 
@@ -13,6 +13,9 @@ connexion.connect((err) => {
   }
   console.log("Connected to database");
 });
+// Import and set up the contactroutes
+const saveContact = require("./app/controllers/contact/contact.controller");
+saveContact(app);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
