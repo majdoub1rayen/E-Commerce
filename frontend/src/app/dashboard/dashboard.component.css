@@ -76,4 +76,17 @@
       font-size: 16px;
     }
   }
-  
+ #icon{
+  margin-right: -100px;
+ }
+ #link a {
+  text-decoration: none;
+  color: black; /* Change to black */
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+#link a:hover {
+  text-decoration: underline;
+}

@@ -1,388 +1,605 @@
-<!--::header part start::-->
-<header class="main_menu home_menu">
+<!-- BREADCRUMB -->
+<div class="section" id="breadcrumb">
+  <!-- container -->
   <div class="container">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-lg-12">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" alt="logo" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="menu_icon"><i class="fas fa-bars"></i></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse main-menu-item"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/dashboard">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="../about">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="blog.html"
-                  id="navbarDropdown_1"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  product
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                  <a class="dropdown-item" routerLink="../product-list"
-                    >product list</a
-                  >
-                  <a class="dropdown-item" routerLink="../product-details"
-                    >product details</a
-                  >
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="blog.html"
-                  id="navbarDropdown_3"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  pages
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                  <a class="dropdown-item" href="login.html"> login </a>
-                  <a class="dropdown-item" href="checkout.html"
-                    >product checkout</a
-                  >
-                  <a class="dropdown-item" href="cart.html">shopping cart</a>
-                  <a class="dropdown-item" href="confirmation.html"
-                    >confirmation</a
-                  >
-                  <a class="dropdown-item" href="elements.html">elements</a>
-                </div>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" routerLink="../contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="hearer_icon d-flex align-items-center">
-            <a id="search_1" href="javascript:void(0)"
-              ><i class="ti-search"></i
-            ></a>
-            <a href="cart.html">
-              <i class="flaticon-shopping-cart-black-shape"></i>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- Header part end-->
-
-<!-- breadcrumb part start-->
-<section class="breadcrumb_part">
-  <div class="container">
+    <!-- row -->
     <div class="row">
-      <div class="col-lg-12">
-        <div class="breadcrumb_iner">
-          <h2>product list</h2>
-        </div>
+      <div class="col-md-12">
+        <ul class="breadcrumb-tree">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">All Categories</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#"></a></li>
+          <li class="active"></li>
+        </ul>
       </div>
     </div>
+    <!-- /row -->
   </div>
-</section>
-<!-- breadcrumb part end-->
+  <!-- /container -->
+</div>
+<!-- /BREADCRUMB -->
 
-<!-- product list part start-->
-<section class="product_list section_padding">
+<!-- SECTION -->
+<div class="section">
+  <!-- container -->
   <div class="container">
+    <!-- row -->
+    <div class="row d-flex">
+      <!-- Product main img -->
+      <div class="col-md-5 col-md-push-2">
+        <div id="product-main-img">
+          <ng-template>
+            <div class="product-preview">
+              <img />
+            </div>
+          </ng-template>
+          <ng-template>
+            0">
+            <div class="product-preview" *ngFor="let t; of">
+              <img [src]="t" alt="" />
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <!-- /Product main img -->
+
+      <!-- Product thumb imgs -->
+      <div class="col-md-2 col-md-pull-5">
+        <ng-template>
+          <div id="product-imgs">
+            <div *ngFor="let t; of" class="product-preview">
+              <img [src]="t" alt="" />
+            </div>
+          </div>
+        </ng-template>
+        <ng-template>
+          <div id="product-imgs">
+            <div class="product-preview">
+              <img />
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <!-- /Product thumb imgs -->
+
+      <!-- Product details -->
+      <div class="col-md-5">
+        <div class="product-details">
+          <h2 class="product-name"></h2>
+          <div>
+            <div class="product-rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <a class="review-link" href="#">10 Review(s) | Add your review</a>
+          </div>
+          <div>
+            <h3 class="product-price"></h3>
+            <span class="product-available">In Stock</span>
+          </div>
+          <p></p>
+
+          <div class="add-to-cart">
+            <div class="qty-label">
+              Qty
+              <div class="input-number">
+                <span class="qty-up">+</span>
+                <span class="qty-down">-</span>
+              </div>
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-shopping-cart"></i>Add To Cart
+            </button>
+          </div>
+
+          <ul class="product-links">
+            <li>Category:</li>
+          </ul>
+
+          <ul class="product-links">
+            <li>Share:</li>
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /Product details -->
+
+      <!-- Product tab -->
+      <div class="col-md-12">
+        <div id="product-tab">
+          <!-- product tab nav -->
+          <ul class="tab-nav" role="tablist">
+            <li class="active" role="presentation">
+              <a data-toggle="tab" href="#tab1" role="tab">Description</a>
+            </li>
+            <li role="presentation">
+              <a data-toggle="tab" href="#tab2" role="tab">Details</a>
+            </li>
+            <li role="presentation">
+              <a data-toggle="tab" href="#tab3" role="tab">Reviews (3)</a>
+            </li>
+          </ul>
+          <!-- /product tab nav -->
+
+          <!-- product tab content -->
+          <div class="tab-content">
+            <!-- tab1  -->
+            <div class="tab-pane fade in active" id="tab1" role="tabpanel">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- /tab1  -->
+
+            <!-- tab2  -->
+            <div class="tab-pane fade in" id="tab2" role="tabpanel">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- /tab2  -->
+
+            <!-- tab3  -->
+            <div class="tab-pane fade in" id="tab3" role="tabpanel">
+              <div class="row">
+                <!-- Rating -->
+                <div class="col-md-3">
+                  <div id="rating">
+                    <div class="rating-avg">
+                      <span>4.5</span>
+                      <div class="rating-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                    <ul class="rating">
+                      <li>
+                        <div class="rating-stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                        <div class="rating-progress">
+                          <div style="width: 80%"></div>
+                        </div>
+                        <span class="sum">3</span>
+                      </li>
+                      <li>
+                        <div class="rating-stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="rating-progress">
+                          <div style="width: 60%"></div>
+                        </div>
+                        <span class="sum">2</span>
+                      </li>
+                      <li>
+                        <div class="rating-stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="rating-progress">
+                          <div></div>
+                        </div>
+                        <span class="sum">0</span>
+                      </li>
+                      <li>
+                        <div class="rating-stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="rating-progress">
+                          <div></div>
+                        </div>
+                        <span class="sum">0</span>
+                      </li>
+                      <li>
+                        <div class="rating-stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="rating-progress">
+                          <div></div>
+                        </div>
+                        <span class="sum">0</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /Rating -->
+
+                <!-- Reviews -->
+                <div class="col-md-6">
+                  <div id="reviews">
+                    <ul class="reviews">
+                      <li>
+                        <div class="review-heading">
+                          <h5 class="name">John</h5>
+                          <p class="date">27 DEC 2018, 8:0 PM</p>
+                          <div class="review-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o empty"></i>
+                          </div>
+                        </div>
+                        <div class="review-body">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="review-heading">
+                          <h5 class="name">John</h5>
+                          <p class="date">27 DEC 2018, 8:0 PM</p>
+                          <div class="review-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o empty"></i>
+                          </div>
+                        </div>
+                        <div class="review-body">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="review-heading">
+                          <h5 class="name">John</h5>
+                          <p class="date">27 DEC 2018, 8:0 PM</p>
+                          <div class="review-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o empty"></i>
+                          </div>
+                        </div>
+                        <div class="review-body">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="reviews-pagination">
+                      <li class="active">1</li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li>
+                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /Reviews -->
+
+                <!-- Review Form -->
+                <div class="col-md-3">
+                  <div id="review-form">
+                    <form class="review-form">
+                      <input
+                        class="input"
+                        placeholder="Your Name"
+                        type="text"
+                      />
+                      <input
+                        class="input"
+                        placeholder="Your Email"
+                        type="email"
+                      />
+                      <textarea
+                        class="input"
+                        placeholder="Your Review"
+                      ></textarea>
+                      <div class="input-rating">
+                        <span>Your Rating: </span>
+                        <div class="stars">
+                          <input
+                            id="star5"
+                            name="rating"
+                            type="radio"
+                            value="5"
+                          /><label for="star5"></label>
+                          <input
+                            id="star4"
+                            name="rating"
+                            type="radio"
+                            value="4"
+                          /><label for="star4"></label>
+                          <input
+                            id="star3"
+                            name="rating"
+                            type="radio"
+                            value="3"
+                          /><label for="star3"></label>
+                          <input
+                            id="star2"
+                            name="rating"
+                            type="radio"
+                            value="2"
+                          /><label for="star2"></label>
+                          <input
+                            id="star1"
+                            name="rating"
+                            type="radio"
+                            value="1"
+                          /><label for="star1"></label>
+                        </div>
+                      </div>
+                      <button class="primary-btn">Submit</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /Review Form -->
+              </div>
+            </div>
+            <!-- /tab3  -->
+          </div>
+          <!-- /product tab content  -->
+        </div>
+      </div>
+      <!-- /product tab -->
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<!-- Section -->
+<div class="section">
+  <!-- container -->
+  <div class="container">
+    <!-- row -->
     <div class="row">
-      <div class="col-md-4">
-        <div class="product_sidebar">
-          <div class="single_sedebar">
-            <form action="#">
-              <input type="text" name="#" placeholder="Search keyword" />
-              <i class="ti-search"></i>
-            </form>
-          </div>
-          <div class="single_sedebar">
-            <div class="select_option">
-              <div class="select_option_list">
-                Category <i class="right fas fa-caret-down"></i>
-              </div>
-              <div class="select_option_dropdown">
-                <p><a href="#">Category 1</a></p>
-                <p><a href="#">Category 2</a></p>
-                <p><a href="#">Category 3</a></p>
-                <p><a href="#">Category 4</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="single_sedebar">
-            <div class="select_option">
-              <div class="select_option_list">
-                Type <i class="right fas fa-caret-down"></i>
-              </div>
-              <div class="select_option_dropdown">
-                <p><a href="#">Type 1</a></p>
-                <p><a href="#">Type 2</a></p>
-                <p><a href="#">Type 3</a></p>
-                <p><a href="#">Type 4</a></p>
-              </div>
-            </div>
-          </div>
+      <div class="col-md-12">
+        <div class="section-title text-center">
+          <h3 class="title">Related Products</h3>
         </div>
       </div>
-      <div class="col-md-8">
-        <div class="product_list">
-          <div class="row">
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_1.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Cervical pillow for airplane car office nap pillow</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_2.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Geometric striped flower home classy decor</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_3.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Foam filling cotton slow rebound pillows</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_4.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Memory foam filling cotton Slow rebound pillows</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_5.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Memory foam filling cotton Slow rebound pillows</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_6.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Sleeping orthopedic sciatica Back Hip Joint Pain relief</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_7.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Memory foam filling cotton Slow rebound pillows</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_8.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Sleeping orthopedic sciatica Back Hip Joint Pain relief</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_9.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Geometric striped flower home classy decor</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <div class="single_product_item">
-                <img
-                  src="img/product/product_list_10.png"
-                  alt="#"
-                  class="img-fluid"
-                />
-                <h3>
-                  <a href="single-product.html"
-                    >Geometric striped flower home classy decor</a
-                  >
-                </h3>
-                <p>From $5</p>
-              </div>
-            </div>
-          </div>
-          <div class="load_more_btn text-center">
-            <a href="#" class="btn_3">Load More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- product list part end-->
 
-<!-- feature part here -->
-<section class="feature_part section_padding">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-lg-6">
-        <div class="feature_part_tittle">
-          <h3>Discover Our Exclusive Features</h3>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="feature_part_content">
-          <p>
-            Explore seamless payment options, effortless online ordering, swift
-            and free delivery, and delightful product presentations. Our
-            commitment is to enhance your shopping experience and exceed your
-            expectations.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-3 col-sm-6">
-        <div class="single_feature_part">
-          <img src="assets/img/icon/feature_icon_1.svg" alt="#" />
-          <h4>Credit Card Support</h4>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single_feature_part">
-          <img src="assets/img/icon/feature_icon_2.svg" alt="#" />
-          <h4>Online Order</h4>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single_feature_part">
-          <img src="assets/img/icon/feature_icon_3.svg" alt="#" />
-          <h4>Free Delivery</h4>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single_feature_part">
-          <img src="assets/img/icon/feature_icon_4.svg" alt="#" />
-          <h4>Product with Gift</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- feature part end -->
-
-<!-- subscribe part here -->
-<section class="subscribe_part section_padding">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="subscribe_part_content">
-          <h2>Get promotions & updates!</h2>
-          <p>
-            Seamlessly empower fully researched growth strategies and
-            interoperable internal or “organic” sources credibly innovate
-            granular internal .
-          </p>
-          <div class="subscribe_form">
-            <input type="email" placeholder="Enter your mail" />
-            <a href="#" class="btn_1">Subscribe</a>
+      <!-- product -->
+      <div class="col-md-3 col-xs-6">
+        <div class="product">
+          <div class="product-img">
+            <img alt="" src="assets/img/product01.png" />
+            <div class="product-label">
+              <span class="sale">-30%</span>
+            </div>
+          </div>
+          <div class="product-body">
+            <p class="product-category">Category</p>
+            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+            <h4 class="product-price">
+              $980.00
+              <del class="product-old-price">$990.00</del>
+            </h4>
+            <div class="product-rating"></div>
+            <div class="product-btns">
+              <button class="add-to-wishlist">
+                <i class="fa fa-heart-o"></i
+                ><span class="tooltipp">add to wishlist</span>
+              </button>
+              <button class="add-to-compare">
+                <i class="fa fa-exchange"></i
+                ><span class="tooltipp">add to compare</span>
+              </button>
+              <button class="quick-view">
+                <i class="fa fa-eye"></i
+                ><span class="tooltipp">quick view</span>
+              </button>
+            </div>
+          </div>
+          <div class="add-to-cart">
+            <button class="add-to-cart-btn">
+              <i class="fa fa-shopping-cart"></i> add to cart
+            </button>
           </div>
         </div>
       </div>
+      <!-- /product -->
+
+      <!-- product -->
+      <div class="col-md-3 col-xs-6">
+        <div class="product">
+          <div class="product-img">
+            <img alt="" src="assets/img/product02.png" />
+            <div class="product-label">
+              <span class="new">NEW</span>
+            </div>
+          </div>
+          <div class="product-body">
+            <p class="product-category">Category</p>
+            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+            <h4 class="product-price">
+              $980.00
+              <del class="product-old-price">$990.00</del>
+            </h4>
+            <div class="product-rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <div class="product-btns">
+              <button class="add-to-wishlist">
+                <i class="fa fa-heart-o"></i
+                ><span class="tooltipp">add to wishlist</span>
+              </button>
+              <button class="add-to-compare">
+                <i class="fa fa-exchange"></i
+                ><span class="tooltipp">add to compare</span>
+              </button>
+              <button class="quick-view">
+                <i class="fa fa-eye"></i
+                ><span class="tooltipp">quick view</span>
+              </button>
+            </div>
+          </div>
+          <div class="add-to-cart">
+            <button class="add-to-cart-btn">
+              <i class="fa fa-shopping-cart"></i> add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /product -->
+
+      <div class="clearfix visible-sm visible-xs"></div>
+
+      <!-- product -->
+      <div class="col-md-3 col-xs-6">
+        <div class="product">
+          <div class="product-img">
+            <img alt="" src="assets/img/product03.png" />
+          </div>
+          <div class="product-body">
+            <p class="product-category">Category</p>
+            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+            <h4 class="product-price">
+              $980.00
+              <del class="product-old-price">$990.00</del>
+            </h4>
+            <div class="product-rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <div class="product-btns">
+              <button class="add-to-wishlist">
+                <i class="fa fa-heart-o"></i
+                ><span class="tooltipp">add to wishlist</span>
+              </button>
+              <button class="add-to-compare">
+                <i class="fa fa-exchange"></i
+                ><span class="tooltipp">add to compare</span>
+              </button>
+              <button class="quick-view">
+                <i class="fa fa-eye"></i
+                ><span class="tooltipp">quick view</span>
+              </button>
+            </div>
+          </div>
+          <div class="add-to-cart">
+            <button class="add-to-cart-btn">
+              <i class="fa fa-shopping-cart"></i> add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /product -->
+
+      <!-- product -->
+      <div class="col-md-3 col-xs-6">
+        <div class="product">
+          <div class="product-img">
+            <img alt="" src="assets/img/product04.png" />
+          </div>
+          <div class="product-body">
+            <p class="product-category">Category</p>
+            <h3 class="product-name"><a href="#">product name goes here</a></h3>
+            <h4 class="product-price">
+              $980.00
+              <del class="product-old-price">$990.00</del>
+            </h4>
+            <div class="product-rating"></div>
+            <div class="product-btns">
+              <button class="add-to-wishlist">
+                <i class="fa fa-heart-o"></i
+                ><span class="tooltipp">add to wishlist</span>
+              </button>
+              <button class="add-to-compare">
+                <i class="fa fa-exchange"></i
+                ><span class="tooltipp">add to compare</span>
+              </button>
+              <button class="quick-view">
+                <i class="fa fa-eye"></i
+                ><span class="tooltipp">quick view</span>
+              </button>
+            </div>
+          </div>
+          <div class="add-to-cart">
+            <button class="add-to-cart-btn">
+              <i class="fa fa-shopping-cart"></i> add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /product -->
     </div>
+    <!-- /row -->
   </div>
-</section>
-<!-- subscribe part end -->
+  <!-- /container -->
+</div>
+<!-- /Section -->

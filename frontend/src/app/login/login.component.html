@@ -4,9 +4,6 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-12">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" alt="logo" />
-          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -25,10 +22,10 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" routerLink="/dashboard">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">about</a>
+                <a class="nav-link" routerLink="../about">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -43,10 +40,10 @@
                   product
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                  <a class="dropdown-item" href="product_list.html">
-                    product list</a
+                  <a class="dropdown-item" routerLink="../product-list"
+                    >product list</a
                   >
-                  <a class="dropdown-item" href="single-product.html"
+                  <a class="dropdown-item" routerLink="../product-details"
                     >product details</a
                   >
                 </div>
@@ -76,37 +73,26 @@
                 </div>
               </li>
 
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="blog.html"
-                  id="navbarDropdown_2"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  blog
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                  <a class="dropdown-item" href="blog.html"> blog</a>
-                  <a class="dropdown-item" href="single-blog.html"
-                    >Single blog</a
-                  >
-                </div>
-              </li>
-
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" routerLink="../contact">Contact</a>
               </li>
             </ul>
           </div>
-          <div class="hearer_icon d-flex align-items-center">
-            <a id="search_1" href="javascript:void(0)"
-              ><i class="ti-search"></i
-            ></a>
-            <a href="cart.html">
-              <i class="flaticon-shopping-cart-black-shape"></i>
+          <div>
+            <a class="nav-link" style="margin-top: -4px">
+              <img
+                width="27"
+                height="27"
+                src="assets/img/icon/love.png"
+                alt="Shopping Cart"
+                style="margin-right: 20px"
+              />
+              <img
+                width="27"
+                height="27"
+                src="assets/img/icon/panier.png"
+                alt="Shopping Cart"
+              />
             </a>
           </div>
         </nav>
@@ -137,13 +123,14 @@
       <div class="card">
         <div class="card-body text-center">
           <h6 class="mb-4 text-muted">Login to your account</h6>
-          <form action="" method="">
+          <form [formGroup]="form" (ngSubmit)="login()">
             <div class="mb-3 text-start">
-              <label for="email" class="form-label">Email adress</label>
+              <label for="email" class="form-label">Email address</label>
               <input
                 type="email"
                 class="form-control"
                 placeholder="Enter Email"
+                formControlName="email"
                 required
               />
             </div>
@@ -153,6 +140,7 @@
                 type="password"
                 class="form-control"
                 placeholder="Password"
+                formControlName="password"
                 required
               />
             </div>
@@ -160,9 +148,8 @@
               <div class="form-check">
                 <input
                   class="form-check-input"
-                  name="remember"
+                  formControlName="remember"
                   type="checkbox"
-                  value=""
                   id="check1"
                 />
                 <label class="form-check-label" for="check1">
@@ -170,17 +157,17 @@
                 </label>
               </div>
             </div>
-            <button class="btn btn-primary shadow-2 mb-4">Login</button>
+            <button type="submit" class="btn btn-primary shadow-2 mb-4">
+              Login
+            </button>
           </form>
-          <p class="mb-2 text-muted">
-            Forgot password? <a href="forgot-password.html">Reset</a>
-          </p>
           <p class="mb-0 text-muted">
-            Don't have account yet? <a routerLink="../register">Signup</a>
+            Don't have an account yet? <a routerLink="../register">Signup</a>
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!--================login_part end =================-->

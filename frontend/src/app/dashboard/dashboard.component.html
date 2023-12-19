@@ -5,9 +5,6 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-12">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" alt="logo" />
-          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -82,12 +79,23 @@
               </li>
             </ul>
           </div>
-          <div class="hearer_icon d-flex align-items-center">
-            <a id="search_1" href="javascript:void(0)"
-              ><i class="ti-search"></i
-            ></a>
-            <a href="cart.html">
-              <i class="flaticon-shopping-cart-black-shape"></i>
+          <div *ngIf="loggedInUser">
+            <p>
+              Welcome, {{ loggedInUser.First_Name }}
+              {{ loggedInUser.Last_Name }}
+            </p>
+            <p>Email: {{ loggedInUser.email }}</p>
+            <!-- Other user details -->
+          </div>
+
+          <div>
+            <a class="nav-link" id="icon" style="margin-top: -4px">
+              <img
+                width="27"
+                height="27"
+                src="assets/img/icon/panier.png"
+                alt="Shopping Cart"
+              />
             </a>
           </div>
         </nav>
